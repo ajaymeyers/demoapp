@@ -1,14 +1,27 @@
 class Greeter
-  def initialize(name = "World")
+  def initialize(name="World", state="good ol")
     @name = name
-  end
+    @state = state
+   end
+ 
   def say_hi
-    puts "Hi #{@name}"
+    if @name == "Stanford"
+      puts "Hi Stanfurd"
+    else
+      puts "Hi #{@state} #{@name}"
+    end
+      
   end
+ 
   def say_bye
-    puts "See ya later #{@name}!"
+    if @name == "Stanford" 
+      @name = "Stanfurd" 
+    end
+    puts "See ya later #{@state} #{@name} !"
   end
+  
   def quick
-    puts @name[0..3]
+    puts @name[0..2]
   end
 end
+
